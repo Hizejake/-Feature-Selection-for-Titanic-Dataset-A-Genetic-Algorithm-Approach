@@ -66,7 +66,7 @@ To ensure the genetic algorithms were executed effectively, several parameters w
 
 3. **Selection**: The selection of parents was set to 10.
 
-3. **Crossover Rate**: The crossover rate was set to 0.5, meaning that 80% of the selected parents underwent crossover to produce offspring. This rate was chosen to ensure a high level of genetic mixing while maintaining some stability in the population.
+3. **Crossover Rate**: The crossover rate was set to 0.5.
 
 4. **Mutation Rate**: The mutation rate was set to 0.2
 
