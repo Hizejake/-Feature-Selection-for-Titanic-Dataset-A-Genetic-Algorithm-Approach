@@ -89,7 +89,9 @@ The following plots show the AIC scores over generations for both the standard g
 
 ## Discussion
 
-The results indicate that both the standard genetic algorithm and the elitist genetic algorithm successfully reduced the AIC score over multiple generations. The elitist genetic algorithm showed a more consistent and rapid decrease in AIC score compared to the standard genetic algorithm, suggesting that carrying over the best individuals to the next generation helps in maintaining high-quality solutions.
+The results indicate that both the standard genetic algorithm and the elitist genetic algorithm successfully reduced the AIC score over multiple generations. However, the final AIC scores reveal that the standard genetic algorithm achieved a slightly lower AIC score (121.4403) compared to the elitist genetic algorithm (121.8111). This suggests that while the elitist genetic algorithm helps in maintaining high-quality solutions by carrying over the best individuals to the next generation, it may not always guarantee the lowest AIC score. The standard genetic algorithm, with its higher variability due to crossover and mutation, was able to explore the search space more effectively in this instance, leading to a marginally better final model.
+
+Additionally, the reduction of AIC scores was steeper for the $(\mu + \lambda)$ genetic algorithm compared to the $(\mu , \lambda)$ genetic algorithm. This indicates that the elitist approach was more effective in rapidly improving the model quality in the initial generations, even though it did not achieve the lowest final AIC score.
 
 ## Conclusion
 
