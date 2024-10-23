@@ -34,12 +34,14 @@ The dataset was standardized to ensure that all features contribute equally to t
 
 The fitness function used in this project is the Akaike Information Criterion (AIC)
 
-The Akaike Information Criterion (AIC) is a measure used for model selection in statistics. It evaluates the quality of a model by balancing the goodness of fit and the complexity of the model. Specifically, AIC is calculated using the formula: $$AIC = 2k - 2ln(\hat{L})$$
+The Akaike Information Criterion (AIC) is a measure used for model selection in statistics. It evaluates the quality of a model by balancing the goodness of fit and the complexity of the model. Specifically, AIC is calculated using the formula: 
+
+$$AIC = 2k - 2ln(\hat{L})$$
 
 where, $k$ = number of estimated parameters .
       $\hat{L}$ = maximised value of likelihood function.
 
-In this project, AIC is implemented as the fitness function to assess different models. By comparing the AIC values of various models, the one with the lowest AIC is selected as the best model, as it indicates a good fit with fewer parameters, thereby avoiding overfitting.
+In this project, AIC is implemented as the fitness function to assess different models. By comparing the AIC values of various models, the one with the lowest AIC is selected as the best model, as it indicates a good fit with fewer parameters, thereby avoiding over-fitting.
 
 
 #### Genetic Algorithm Operations
@@ -54,16 +56,36 @@ In this project, AIC is implemented as the fitness function to assess different 
 
 Two variants of the genetic algorithm were implemented: the standard genetic algorithm and the elitist genetic algorithm. The standard genetic algorithm involves generating new populations through crossover and mutation, while the elitist genetic algorithm ensures that the best individuals are carried over to the next generation.
 
+### Parameters Set for Execution
+
+To ensure the genetic algorithms were executed effectively, several parameters were carefully set and tuned:
+
+1. **Population Size**: The initial population size was set to 50 individuals.
+
+2. **Number of Generations**: The algorithms were run for 10 generations.
+
+3. **Selection**: The selection of parents was set to 10.
+
+3. **Crossover Rate**: The crossover rate was set to 0.5, meaning that 80% of the selected parents underwent crossover to produce offspring. This rate was chosen to ensure a high level of genetic mixing while maintaining some stability in the population.
+
+4. **Mutation Rate**: The mutation rate was set to 0.2
+
+5. **Elitism**: For the elitist genetic algorithm, the elitism rate was set to 5.
+
+These parameters were determined through a combination of literature review and empirical testing to ensure that the genetic algorithms performed optimally for the feature selection task.
+
 ## Results
 
 The genetic algorithms were run, and the AIC scores were collected over multiple generations. The results indicate that both the standard genetic algorithm and the elitist genetic algorithm successfully reduced the AIC score over multiple generations.
+
+Final AIC Score by $(\mu , \lambda)$ Genetic Algorithm: 121.44030760398728
+Final AIC Score by $(\mu + \lambda)$ Genetic Algorithm: 121.81114377996589
 
 ### AIC Score Plots
 
 The following plots show the AIC scores over generations for both the standard genetic algorithm and the elitist genetic algorithm:
 
-![AIC Score vs Generation for Genetic Algorithm](aic_scores_plot1.png)
-![AIC Score vs Generation for Genetic Algorithm with Elitism](aic_scores_plot2.png)
+![AIC Score vs Generation for Elitist and Non-Elitist Genetic Algorithm](genetic_algorithm_with_elitism_aic_scores.png)
 
 ## Discussion
 
